@@ -1,0 +1,13 @@
+
+.App{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background-color: #282c34;
+  justify-content: center;
+  padding: 5%;
+}

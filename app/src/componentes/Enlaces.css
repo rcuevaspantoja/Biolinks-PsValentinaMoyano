@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+.Enlaces{
+    display:flex;
+    justify-content: center;
+    min-width: 570px;
+    height: 700px;
+    border-radius: 15px;
+    background-color:pink;
+    box-shadow: 0 0 9px white;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 50px;
+    text-shadow: 0 0 4px black;
+}
