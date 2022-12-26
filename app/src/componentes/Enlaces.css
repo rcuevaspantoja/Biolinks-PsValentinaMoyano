@@ -89,7 +89,7 @@ h2 {
         justify-content: center;
         align-items: center;
         min-width: 320px;
-        height: auto;
+        height: 80vh;
         border-radius: 15px;
         background-color:pink;
         box-shadow: 0 0 9px white;
