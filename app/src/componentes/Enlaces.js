@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Enlaces.css'
 import Card from '@mui/material/Card';
 import { Button } from '@mui/material';
 import Link from '@mui/material/Link';
 import TextField from '@mui/material/TextField';
+import Alert from '@mui/material/Alert';
+
 
 function Enlaces() {
 
@@ -18,11 +20,16 @@ function Enlaces() {
               }}
               variant="contained" 
             >
-
               <h2> {props.children} </h2>
-
             </Card>     
           </Button>
+  }
+
+  const[correoElectronico, setCorreoElectronico] = useState('');
+
+  const funcionGuardar = async() => {
+
+    <Alert severity="success"> {correoElectronico} </Alert>
   }
 
   return (
@@ -47,7 +54,16 @@ function Enlaces() {
             <h2>
               Para una notificación de horas disponibles, subscribete aquí:
             </h2>
-            <TextField id="outlined-basic" label="Email" variant="outlined" size="small" />
+            {/* <TextField id="outlined-basic" label="Email" variant="outlined" size="small" />
+ */}
+
+            <TextField size="small"
+              value={correoElectronico}
+              placeholder="Tu correo aquí :)"
+              onChange={(event) => {
+                setCorreoElectronico(event.target.value)
+              }}
+            />  
 
             <div className='botonsub'>
               <Button
@@ -57,7 +73,9 @@ function Enlaces() {
                         fontSize: "13px",
                         color: "black"
                   }}
-              variant="contained">Suscribirse</Button>
+              variant="contained"
+              onClick={funcionGuardar}
+              >Suscribirse</Button>
             </div>     
           </div>
         </div>
