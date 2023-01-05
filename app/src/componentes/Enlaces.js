@@ -25,7 +25,7 @@ function Enlaces() {
           </Button>
   }
 
-  const notificacion = () => toast.success(correoElectronico+" agregado de manera correcta.")
+  const notificacion = () => toast.success(correoElectronico+" haz sido agregado exitosamente.")
 
   const[correoElectronico, setCorreoElectronico] = useState('');
 
@@ -56,8 +56,6 @@ function Enlaces() {
             <h2>
               Para una notificación de horas disponibles, subscribete aquí:
             </h2>
-            {/* <TextField id="outlined-basic" label="Email" variant="outlined" size="small" />
- */}
 
             <TextField size="small"
               value={correoElectronico}
