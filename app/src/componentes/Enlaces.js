@@ -9,6 +9,14 @@ import Alert from '@mui/material/Alert';
 
 function Enlaces() {
 
+  function validarEmail(valor) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
+     alert("La dirección de email " + valor + " es correcta.");
+    } else {
+     alert("La dirección de email es incorrecta.");
+    }
+  }
+
   const Tarjeta = (props) => {
     return <Button className='Card'>
             <Card sx={{ minWidth: 270 }} 
