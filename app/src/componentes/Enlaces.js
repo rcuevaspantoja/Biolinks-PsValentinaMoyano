@@ -4,8 +4,8 @@ import Card from '@mui/material/Card';
 import { Button } from '@mui/material';
 import Link from '@mui/material/Link';
 import TextField from '@mui/material/TextField';
-import Alert from '@mui/material/Alert';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Enlaces() {
 
@@ -33,11 +33,13 @@ function Enlaces() {
           </Button>
   }
 
+  const notificacion = () => toast.success(correoElectronico+" agregado de manera correcta.")
+
   const[correoElectronico, setCorreoElectronico] = useState('');
 
   const funcionGuardar = async() => {
 
-    <Alert severity="success"> {correoElectronico} </Alert>
+    notificacion();
   }
 
   return (
@@ -84,6 +86,20 @@ function Enlaces() {
               variant="contained"
               onClick={funcionGuardar}
               >Suscribirse</Button>
+
+              <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+              />
+
             </div>     
           </div>
         </div>
