@@ -9,6 +9,15 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Enlaces() {
 
+  function validarEmail(correoElectronico) {
+    // eslint-disable-next-line
+    if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(correoElectronico)){
+     return true
+    } else {
+     return false
+    }
+  }
+
   const Tarjeta = (props) => {
     return <Button className='Card'>
             <Card sx={{ minWidth: 270 }} 
@@ -26,12 +35,17 @@ function Enlaces() {
   }
 
   const notificacion = () => toast.success(correoElectronico+" haz sido agregado exitosamente.")
+  const notificacionRechazada = () => toast.error("Error, porfavor revisar el correo.")
 
   const[correoElectronico, setCorreoElectronico] = useState('');
 
   const funcionGuardar = async() => {
 
-    notificacion();
+    if(validarEmail(correoElectronico) === true){
+      notificacion();
+    }else{
+      notificacionRechazada();
+    }
   }
 
   return (
@@ -62,6 +76,7 @@ function Enlaces() {
               placeholder="Tu correo aquí :)"
               onChange={(event) => {
                 setCorreoElectronico(event.target.value)
+                validarEmail(correoElectronico)
               }}
             />  
 
