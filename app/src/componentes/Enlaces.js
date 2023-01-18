@@ -9,11 +9,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Enlaces() {
 
-  function validarEmail(valor) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
-     alert("La dirección de email " + valor + " es correcta.");
+  function validarEmail(correoElectronico) {
+    // eslint-disable-next-line
+    if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(correoElectronico)){
+     return true
     } else {
-     alert("La dirección de email es incorrecta.");
+     return false
+
     }
   }
 
@@ -33,13 +35,18 @@ function Enlaces() {
           </Button>
   }
 
-  const notificacion = () => toast.success(correoElectronico+" agregado de manera correcta.")
+  const notificacion = () => toast.success(correoElectronico+" haz sido agregado exitosamente.")
+  const notificacionRechazada = () => toast.error("Error, porfavor revisar el correo.")
 
   const[correoElectronico, setCorreoElectronico] = useState('');
 
   const funcionGuardar = async() => {
 
-    notificacion();
+    if(validarEmail(correoElectronico) === true){
+      notificacion();
+    }else{
+      notificacionRechazada();
+    }
   }
 
   return (
@@ -64,14 +71,13 @@ function Enlaces() {
             <h2>
               Para una notificación de horas disponibles, subscribete aquí:
             </h2>
-            {/* <TextField id="outlined-basic" label="Email" variant="outlined" size="small" />
- */}
 
             <TextField size="small"
               value={correoElectronico}
               placeholder="Tu correo aquí :)"
               onChange={(event) => {
                 setCorreoElectronico(event.target.value)
+                validarEmail(correoElectronico)
               }}
             />  
 
