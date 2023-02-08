@@ -25,3 +25,10 @@ Cuenta con la capacidad de redireccionar a las otras redes sociales de la Psicol
 git clone https://github.com/rcuevaspantoja/Biolinks-PsValentinaMoyano.git
 
 ```
+
+### Capturas
+
+https://github.com/rcuevaspantoja/Biolinks-PsValentinaMoyano/blob/master/src/archivos/Capturas/Screenshot_1.png
+https://github.com/rcuevaspantoja/Biolinks-PsValentinaMoyano/blob/master/src/archivos/Capturas/Screenshot_2.png
+https://github.com/rcuevaspantoja/Biolinks-PsValentinaMoyano/blob/master/src/archivos/Capturas/Screenshot_3.png
+https://github.com/rcuevaspantoja/Biolinks-PsValentinaMoyano/blob/master/src/archivos/Capturas/Screenshot_4.png
