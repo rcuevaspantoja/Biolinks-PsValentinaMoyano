@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     min-width: 500px;
-    /* height: auto; */
     min-height: 650px;
     border-radius: 15px;
     background-color:pink;
@@ -54,6 +53,7 @@ h2 {
 .CardContent{
     display:flex;
     justify-content: center;
+    border: 3px solid
 }
 
 .subscribete{
@@ -63,7 +63,7 @@ h2 {
     text-align: center;
     background-color: pink;
     border: 3px solid rgb(241, 185, 43);
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 15px;
     margin-right: 15px;
     height: auto;

@@ -74,7 +74,7 @@ function Enlaces() {
 
             <TextField size="small"
               value={correoElectronico}
-              placeholder="Tu correo aquí :)"
+              placeholder="Tu correo aquí"
               onChange={(event) => {
                 setCorreoElectronico(event.target.value)
                 validarEmail(correoElectronico)
