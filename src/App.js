@@ -4,7 +4,6 @@ import Enlaces from './componentes/Enlaces'
 function App() {
   return (
     <div className="App">
-
       <Enlaces/>
     </div>
   );
